@@ -7,7 +7,7 @@ from mxnet import nd
 from mxnet import autograd
 
 # Define values of x to be inputted into f(x).
-x = nd.array([1,2, 3,4])
+x = nd.array([1, 2, 3, 4])
 
 # 1. Let autograd know we are differentiating in respect to x.
 # 2. Allocate space for gradients to be computed.
