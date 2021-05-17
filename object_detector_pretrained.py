@@ -6,6 +6,7 @@ from matplotlib import pyplot as plt
 
 '''Obtain and load image'''
 # Download image from internet and store it as a jpg in the ML practice folder
+# Note: Image will not download if the path already exists.
 path = 'Test Images/ivy.png'
 url = 'https://lh3.googleusercontent.com/CJDkf5wm0ABO7Op6TwgudkgZRFexcAC91fRiKGOnEhnLwWoGUazNvaixfbC6hNrzQmVxZVwawzlIK1FT5DOub4o6ElP_d22xzrVRuGzGtdyvIgiioG5rc-weGM0TKUNGUO-M4-Iuu8s=w600-h315-p-k'
 gcv.utils.download(url=url, path=path)

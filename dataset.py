@@ -13,14 +13,16 @@ import matplotlib.pyplot as plt
 
 '''Load the MNIST dataset'''
 # Load the MNIST dataset from a library of gluon's preloaded datasets.
-# Each sample is an image (in 3D NDArray) with shape (28, 28, 1)
+# Each datum is a tuple in the format (sample, label).
+# Each sample is an HWC image (in 3D NDArray) with shape (28, 28, 1).
 train_dataset = gluon.data.vision.datasets.MNIST(train=True)
 validation_dataset = gluon.data.vision.datasets.MNIST(train=False)
 
 # Access a sample image input from the 6th data point and display it in pyplot.
-sample_image = train_dataset[5][0]
-print("Label: {}".format(train_dataset[5][1]))
-plt.imshow(sample_image[:, :, 0].asnumpy())
+i = 5
+sample_image = train_dataset[i][0]
+print("Label: {}".format(train_dataset[i][1]))
+plt.imshow(sample_image[:, :, :].asnumpy())
 plt.show()
 
 '''Create a dataset from images stored in a folder on my local computer'''

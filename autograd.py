@@ -30,5 +30,5 @@ with autograd.record():
 # Calculate gradients of y with automatic differentiation.
 y.backward()
 
-# The gradients of x are stored in the field .grad of the input ndarray.
+# The gradients of y in respect to x are stored in the field .grad of the input ndarray.
 print(x.grad)
