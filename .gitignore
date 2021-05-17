@@ -1,0 +1,5 @@
+# Ignore test images.
+/Test Images
+
+# Ignore venv for performance.
+/venv
